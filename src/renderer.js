@@ -14,11 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function showFade() {
         const overlay = document.getElementById("fade-overlay");
+        overlay.style.transition = "opacity 1.5s";
         overlay.style.opacity = "0";
         setTimeout(() => {
             overlay.style.display = "none";
-        }, 3000);
+        }, 1500);
     }
+    const overlay = document.getElementById("fade-overlay");
+    overlay.style.opacity = "1";
+    overlay.style.display = "block";
+    overlay.style.transition = "opacity 1.5s";
     const particlesContainer = document.getElementById('particles-container');
     const particleCount = 80;
     let particlesLoaded = 0;
