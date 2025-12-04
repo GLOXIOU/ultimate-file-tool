@@ -6,7 +6,9 @@
     "start": "electron ."
   },
   "dependencies": {
-    "archiver": "^5.3.2"
+    "archiver": "^5.3.2",
+    "crypto": "^1.0.1",
+    "fs": "^0.0.1-security"
   },
   "devDependencies": {
     "electron": "^31.0.0"
