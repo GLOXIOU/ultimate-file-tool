@@ -213,3 +213,16 @@ body {
     min-height: 60px;
   }
 }
+.file-selector{
+  background-color: #0073ff;
+  color: #fff;
+  padding: 12px 2vw;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  margin-left: 10px;
+  transition: background 0.2s;
+  margin-bottom: 20px;
+}
