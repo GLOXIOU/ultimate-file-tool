@@ -1,5 +1,7 @@
 # ⚡️ ultimate-file-tool
 
+**Project still in development**
+
 A sleek and modern desktop application built with **Electron JS** that allows you to compress multiples files effortlessly, convert them, dowload a file from YouTube and many other little things ! Designed to be lightweight, fast, and cross-platform.
 
 Perfect for anyone who wants a simple drag-and-drop interface for a lot of file stuff.
