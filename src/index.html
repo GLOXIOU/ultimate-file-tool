@@ -1,55 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <script src="renderer.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' file: data: blob:; media-src 'self' file: blob:; font-src 'self' data:; worker-src 'self' blob:; connect-src 'self' data: blob:">
+  <title>Ultimate File Tool</title>
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div id="loader-container">
-        <div class="loader-bg"></div>
-        <div class="loader">
-            <svg viewBox="0 0 80 80" class="spinner"><circle cx="40" cy="40" r="35"/></svg>
+  <div class="bg">
+    <div class="sphere sphere-1"></div>
+    <div class="sphere sphere-2"></div>
+    <div class="glow"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise-overlay"></div>
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand"><img id="brand" src="assets/logo-w.png" alt="Ultimate File Tool"></div>
+      <nav class="nav" id="nav"></nav>
+      <div class="sidebar-footer" id="sidebar-footer"></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn" id="back" title="Back (Esc)"><img src="assets/back-arrow-icon.svg" alt=""></button>
+        <div class="crumbs" id="crumbs"></div>
+        <div class="spacer"></div>
+        <div class="search">
+          <input id="search" type="text" placeholder="Search tools, formats…" autocomplete="off" spellcheck="false">
+          <kbd>Ctrl K</kbd>
         </div>
+      </header>
+      <div class="view-wrap" id="view-wrap">
+        <section class="view" id="view"></section>
+      </div>
+    </main>
+  </div>
+
+  <div class="drop-overlay" id="drop-overlay">
+    <div class="box">
+      <div class="icon">📥</div>
+      <b id="drop-title">Drop your files</b>
+      <span id="drop-sub">We'll show you everything you can do with them</span>
     </div>
-    <div id="fade-overlay"></div>
-    <div class="gradient-background">
-        <div class="gradient-sphere sphere-1"></div>
-        <div class="gradient-sphere sphere-2"></div>
-        <div class="glow"></div>
-        <div class="grid-overlay"></div>
-        <div class="noise-overlay"></div>
-        <div class="particles-container" id="particles-container"></div>
-    </div>
-    <div class="main">
-        <div class="logo">
-            <img id="site-logo" src="assets/logo-w.png" alt="Ultimate Compressor Logo" />
-        </div>
-        <div class="btn-container">
-            <a class="btn preload-link" href="../src/compress/index.html">
-                <span>🧾</span>
-                Compress a file
-            </a>
-            <a class="btn preload-link" href="../src/convert/index.html">
-                <span>↗️</span>
-                Convert a file
-            </a>
-        </div>
-        <div class="btn-container-2">
-            <a class="btn preload-link" href="../src/dowload/index.html">
-                <span>📷</span>
-                Download from YouTube
-            </a>
-            <a class="btn preload-link" href="../src/other/index.html">
-                <span>🛠️</span>
-                Other tools
-            </a>
-            <a class="btn" id="openLink" href="https://github.com/GLOXIOU">
-                <span>⚙️</span>
-                My github
-            </a>
-        </div>
-    </div>
-    <script src="preload.js"></script>
+  </div>
+  <div class="toasts" id="toasts"></div>
+
+  <script src="../node_modules/pdfjs-dist/legacy/build/pdf.min.js"></script>
+  <script src="../node_modules/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/renderer-tools.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
